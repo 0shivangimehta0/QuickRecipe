@@ -1,0 +1,145 @@
+.NavbarItems {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    width: 95%;
+    height: 100px;
+    box-shadow: 0 5px 15px 0 #717744;
+    border-radius: 13px;
+    top: 10px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9999;
+}
+
+.NavbarLogo {
+    color: #717744;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 10px;
+    list-style: none;
+    align-items: center;
+}
+.nav-links-mobile{
+    display: none;
+}
+.nav-links {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 0.7rem 1rem;
+}
+
+.nav-links i {
+    padding-right: 10px;
+}
+
+.nav-links:hover {
+    background-color: #ABAC7F;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+button {
+    padding: 0.5rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: #ABAC7F;
+    color:white;
+}
+
+button:hover {
+    background-color: #252916;
+    color: white;
+}
+
+.menu-icons {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .NavbarItems {
+        z-index: 99;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        opacity: 0;
+        align-items: stretch;
+        padding: 80px 0 30px 0;
+        margin: 0;
+        background: #ABAC7F;
+        transition: 0.3s ease-in-out;
+        border-radius: 13px;
+    }
+
+    .nav-menu.active {
+        z-index: -1;
+        left: 0;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-links {
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 2rem 0;
+    }
+
+    .nav-links:hover {
+        background-color: #373D20;
+        transition: none;
+    }
+
+    button {
+        display: none;
+    }
+
+    .menu-icons {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-icons i {
+        font-size: 1.2rem;
+        color: black;
+    }
+
+    .nav-links-mobile {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: auto;
+        border-radius: 4px;
+        width: 80%;
+        background-color: white;
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+}
